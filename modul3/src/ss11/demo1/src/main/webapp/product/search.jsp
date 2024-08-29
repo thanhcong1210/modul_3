@@ -48,7 +48,9 @@
         </tr>
         </thead>
         <tbody>
-
+        <c:if test="${searchProducts.isEmpty()}">
+            <h2>${message}</h2>
+        </c:if>
         <c:forEach var="product" items="${searchProducts}">
             <tr>
                 <td>${product.id}</td>

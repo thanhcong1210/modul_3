@@ -38,7 +38,11 @@ public class ProductController extends HttpServlet{
             case "search":
                 String srearchProduct = request.getParameter("searchProduct");
                 List<Product> searchProducts = productService.searchByName(srearchProduct);
-                request.setAttribute("searchProducts", searchProducts);
+                if (searchProducts.isEmpty()) {
+                    request.setAttribute("message", "Không tìm thấy sản phẩm");
+                } else {
+                    request.setAttribute("searchProducts", searchProducts);
+                }
                 request.getRequestDispatcher("/product/search.jsp").forward(request, response);
                 break;
             default:
