@@ -27,28 +27,34 @@
     </div>
 </nav>
 
-<div class="container">
-    <form method="post">
-        <div class="mb-3">
-            <label for="name" class="form-label">Tên sản phẩm</label>
-            <input type="text" class="form-control" id="name" name="name" required maxlength="100"
-                   minlength="5">
-        </div>
-        <div class="mb-3">
-            <label class="form-label" for="price">Giá</label>
-            <input type="number" class="form-control" id="price" name="price" min="0" max="1000000">
-        </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Mô tả sản phẩm</label>
-            <input type="text" class="form-control" id="description" name="description" required>
-        </div>
-        <div class="mb-3">
-            <label for="producer" class="form-label">Nhà sản xuất</label>
-            <input type="text" class="form-control" id="producer" name="producer" required>
-        </div>
+<div class="container ">
+    <div class="w-25 mx-auto shadow-sm p-3 mt-5 rounded">
+        <h4 class="text-center mb-3">Thêm mới </h4>
+        <form method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Tên sản phẩm</label>
+                <input type="text" class="form-control form-control-sm" id="name" name="name" required maxlength="100"
+                       minlength="5">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Giá</label>
+                <input type="number" class="form-control form-control-sm" id="price" name="price" min="0" max="1000000">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Mô tả sản phẩm</label>
+                <input type="text" class="form-control form-control-sm" id="description" name="description" required>
+            </div>
+            <div class="mb-3">
+                <label for="producer" class="form-label">Nhà sản xuất</label>
+                <input type="text" class="form-control form-control-sm" id="producer" name="producer" required>
+            </div>
+            <div class="text-end">
+                <a href="/product" class="btn btn-sm btn-secondary ">Trở lại</a>
+                <button type="submit" class="btn btn-sm btn-primary">Xác nhận</button>
+            </div>
+        </form>
+    </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
 </div>
 
 </body>

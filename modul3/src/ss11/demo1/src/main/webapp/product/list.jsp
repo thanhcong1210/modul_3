@@ -12,8 +12,9 @@
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 </head>
-<body>
+<body class="bg-body-tertiary">
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -34,10 +35,14 @@
         </form>
     </div>
 </nav>
-<div class="container">
+<div class="container shadow-sm p-3 rounded mt-3 ">
     <p style="color: blue">${message}</p>
-    <button class="btn btn-primary mt-4" onclick="window.location.href='/product?action=create'">Thêm</button>
-    <table class="table table-hover">
+    <div class="d-flex justify-content-between">
+        <h2 class="m-0">Danh sách sản phẩm</h2>
+        <button class="btn btn-primary  mb-3" onclick="window.location.href='/product?action=create'">Thêm</button>
+        <a href="/product?action=create">Thêm mới</a>
+    </div>
+    <table class="table table-hover table-bordered ">
         <thead>
         <tr>
             <th>Mã</th>
@@ -45,6 +50,7 @@
             <th>Giá sản phẩm</th>
             <th>Mô tả của sản phầm</th>
             <th>Nhà sản xuất</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -60,9 +66,9 @@
                     <form class="d-inline" action="/product" method="get">
                         <input type="hidden" name="action" value="update">
                         <input type="hidden" name="id" value="${product.id}">
-                        <button type="submit" class="btn btn-warning">Sửa</button>
+                        <button type="submit" class="btn btn-sm btn-success">Sửa</button>
                     </form>
-                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal${product.id}">
+                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal${product.id}">
                         Xóa
                     </button>
                     <div class="modal fade" id="deleteModal${product.id}" tabindex="-1"

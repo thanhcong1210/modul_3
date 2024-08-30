@@ -35,9 +35,9 @@
     </div>
 </nav>
 <div class="container">
-    <p style="color: blue">${message}</p>
+
     <button class="btn btn-primary mt-4" onclick="window.location.href='/product?action=create'">Thêm</button>
-    <table class="table table-hover">
+    <table class="table table-hover ">
         <thead>
         <tr>
             <th>Mã</th>
@@ -45,6 +45,7 @@
             <th>Giá sản phẩm</th>
             <th>Mô tả của sản phầm</th>
             <th>Nhà sản xuất</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -92,6 +93,7 @@
         </c:forEach>
         </tbody>
     </table>
+    <h3 class="text-center mt-5">${message}</h3>
 </div>
 
 </body>

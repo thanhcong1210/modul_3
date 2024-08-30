@@ -17,9 +17,9 @@
 <body>
 
 <div class="container">
-    <form class="w-50 mx-auto mt-5" action="/product" method="post">
+    <form class="w-25 mx-auto mt-5 shadow-sm p-3 rounded" action="/product" method="post">
         <input type="hidden" name="action" value="update">
-        <h1 class="text-center my-5">Chỉnh Sửa Sản Phẩm</h1>
+        <h4 class="text-center ">Chỉnh Sửa Sản Phẩm</h4>
         <div class="mb-3">
             <label for="id" class="form-label">ID sản phẩm</label>
             <input type="text" class="form-control" id="id" name="id" value="${product.id}" readonly>
@@ -41,7 +41,10 @@
             <label for="producer" class="form-label">Nhà Sản Xuất</label>
             <input type="text" class="form-control" id="producer" name="producer" value="${product.producer}" required>
         </div>
-        <button type="submit" class="btn btn-primary">Xác Nhận</button>
+        <div class="d-flex justify-content-end">
+            <a href="/product" class="btn btn-sm btn-secondary me-2">Trở lại</a>
+            <button type="submit" class="btn btn-sm  btn-primary">Xác Nhận</button>
+        </div>
     </form>
 </div>
 
